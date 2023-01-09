@@ -26,6 +26,12 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+Configurar o arquivo .env de acordo com as suas preferências.
+
+Atualmente está configurado para o projeto se conectar ao servidor Postgre usando o localhost(127.0.0.1) na porta 5432
+
+O projeto vai ser iniciado usando o localhost na porta 5000
+
 ## Installation
 
 ```bash
@@ -34,16 +40,9 @@ $ yarn install
 
 ## Running the app
 
-```bash
-# development
-$ yarn run start
-
-# watch mode
+````bash
+# Inicializar o Projeto
 $ yarn run start:dev
-
-# production mode
-$ yarn run start:prod
-```
 
 ## Test
 
@@ -51,12 +50,7 @@ $ yarn run start:prod
 # unit tests
 $ yarn run test
 
-# e2e tests
-$ yarn run test:e2e
-
-# test coverage
-$ yarn run test:cov
-```
+````
 
 ## Support
 
