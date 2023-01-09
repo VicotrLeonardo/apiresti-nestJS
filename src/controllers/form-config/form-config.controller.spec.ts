@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { FormConfigController } from './form-config.controller';
 
 describe('FormConfigController', () => {
@@ -9,14 +10,24 @@ describe('FormConfigController', () => {
     res = {
       status: jest.fn().mockReturnThis(),
       json: jest.fn().mockReturnThis(),
-      send: jest.fn().mockReturnThis()
+      send: jest.fn().mockReturnThis(),
     };
   });
 
   describe('getConfig', () => {
     it('should return the config when it exists', async () => {
       // Arrange
-      const expectedResult = [        {          "id":1,          "name": "model",          "label": "Modelo",          "required": false,          "type": "text"        },        {          "id":2,          "name": "year",          "label": "Ano",          "required": false,          "type": "number"        },        {          "id":3,          "name": "color",          "label": "Cor",          "required": false,          "type": "text"        }      ];
+      const expectedResult = [
+        {
+          id: 1,
+          name: 'model',
+          label: 'Modelo',
+          required: false,
+          type: 'text',
+        },
+        { id: 2, name: 'year', label: 'Ano', required: false, type: 'number' },
+        { id: 3, name: 'color', label: 'Cor', required: false, type: 'text' },
+      ];
 
       // Act
       await formConfigController.getConfig(res);
@@ -31,7 +42,7 @@ describe('FormConfigController', () => {
       formConfigController = new FormConfigController();
       res = {
         status: jest.fn().mockReturnThis(),
-        send: jest.fn().mockReturnThis()
+        send: jest.fn().mockReturnThis(),
       };
 
       // Act
@@ -39,7 +50,7 @@ describe('FormConfigController', () => {
 
       // Assert
       expect(res.status).toHaveBeenCalledWith(500);
-      expect(res.send).toHaveBeenCalledWith("Não deu certo");
+      expect(res.send).toHaveBeenCalledWith('Não deu certo');
     });
   });
 });

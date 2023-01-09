@@ -1,7 +1,7 @@
+/* eslint-disable prettier/prettier */
 export interface Campo {
-    id: number;
-    name: string;
-    label: string;
-    required: boolean;
-    type: string;
-  }
+  name: string;
+  label: string;
+  required: boolean;
+  type: string;
+}
